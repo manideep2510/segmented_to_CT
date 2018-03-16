@@ -2,9 +2,8 @@ import vtk
 from vtk.util import numpy_support
 import os
 import numpy
-from matplotlib import pyplot, cm
 
-
+# Converting all the 3D CT scans of all the patients in DICOM format to 3D numpy arrays
 patientCT = []
 
 for filename in os.listdir("data"):
@@ -37,7 +36,8 @@ for filename in os.listdir("data"):
         
     patientCT.append(ArrayDicom)
     
-    
+
+# Converting all the 3D segmented DICOM liver images of all the patients to 3D numpy arrays    
 liver = []
 
 for filename in os.listdir("data"):
